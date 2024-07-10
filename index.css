@@ -117,10 +117,12 @@ body {
     color: #fff;
     text-align: center;
     margin-top: 5px;
+    white-space: nowrap;
 }
 
 .container .game-over .game-over-text .highscore {
     color: #fcba04;
+    white-space: nowrap;
 }
 
 .container .game-over .restart {
