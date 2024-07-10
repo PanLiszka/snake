@@ -62,7 +62,7 @@ const createGame = () => {
     let li = `<div class="food" style="grid-area: ${foodPosition[1]} / ${foodPosition[0]}; background-image: url('./food/${foodImage}')"></div>`;
 
     for (let i = 0; i < snakeBody.length; i++) {
-        li += `<div class="snake" style="grid-area: ${snakeBody[i][1]} / ${snakeBody[i][0]}"></div>`;
+        li += `<div class="snake-body" style="grid-area: ${snakeBody[i][1]} / ${snakeBody[i][0]}"></div>`;
 
         // Sprawdzanie czy wąż nie zjadł samego siebie
         if (
@@ -109,7 +109,7 @@ const changeDirection = (direction) => {
             movePixels = [1, 0];
             break;
     }
-    createGame();
+    /* createGame(); */
 };
 
 document.body.addEventListener("keydown", (e) => {
