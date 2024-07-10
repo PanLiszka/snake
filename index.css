@@ -1,0 +1,137 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Orbitron", sans-serif;
+    background-color: #b0c4de;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100dvh;
+}
+
+.container {
+    height: 400px;
+    width: 350px;
+    background-color: #1a1f22;
+    border-radius: 5px;
+    overflow: hidden;
+    position: absolute;
+}
+
+.container .score {
+    height: 50px;
+    width: 100%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background: #24282e;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    color: #d3d3d3;
+    font-size: 15px;
+}
+
+.container .score .score-value {
+    color: #fcba04;
+}
+
+.container .game {
+    height: 300px;
+    width: 100%;
+    display: grid;
+    grid-template: repeat(30, 1fr) / repeat(30, 1fr);
+}
+
+.container .game .food {
+    background-size: 10px;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+
+.container .game .snake {
+    background-color: #fcba04;
+}
+
+.container .buttons {
+    height: 50px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    background-color: #24282e;
+}
+
+.container .buttons button {
+    all: unset;
+    height: 50px;
+    width: 24.7%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    color: #d3d3d3;
+    border-right: 1px solid #808080;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.container .buttons button:last-child {
+    border-right: none;
+}
+
+.container .game-over {
+    background-color: #24282e;
+    position: absolute;
+    top: -100%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    transition: all 0.2s;
+}
+
+.container .game-over h2 {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ff3232;
+    font-size: 35px;
+    white-space: nowrap;
+}
+
+.container .game-over .game-over-text {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.container .game-over .game-over-text .highscore {
+    color: #fcba04;
+}
+
+.container .game-over .restart {
+    all: unset;
+    height: 50px;
+    width: 50px;
+    background-color: #808080;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    border-radius: 5px;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}

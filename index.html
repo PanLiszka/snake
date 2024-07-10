@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Snake</title>
+
+        <link rel="stylesheet" href="index.css" />
+    </head>
+    <body>
+        <div class="container">
+            <div class="score">
+                <span>Wynik: <span class="score-value">0</span></span>
+            </div>
+            <div class="game"></div>
+            <div class="buttons">
+                <button class="arrow-left" onclick="changeDirection('left')">
+                    <i class="fa-solid fa-arrow-left-long"></i>
+                </button>
+                <button class="arrow-up" onclick="changeDirection('up')">
+                    <i class="fa-solid fa-arrow-up-long"></i>
+                </button>
+                <button class="arrow-down" onclick="changeDirection('down')">
+                    <i class="fa-solid fa-arrow-down-long"></i>
+                </button>
+                <button class="arrow-right" onclick="changeDirection('right')">
+                    <i class="fa-solid fa-arrow-right-long"></i>
+                </button>
+            </div>
+            <div class="game-over">
+                <h2>Koniec gry</h2>
+                <div class="game-over-text">
+                    <p>Najlepszy wynik: <span class="highscore">0</span></p>
+                    <p>Wynik: <span class="game-over-score">0</span></p>
+                </div>
+                <button class="restart">
+                    <i class="fa-solid fa-arrows-rotate"></i>
+                </button>
+            </div>
+        </div>
+
+        <script src="index.js"></script>
+    </body>
+</html>
