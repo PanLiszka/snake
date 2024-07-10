@@ -85,7 +85,16 @@ const moveFood = () => {
     foodPosition[1] = Math.floor(Math.random() * 30) + 1;
 };
 
+const getCurrentDirection = () => {
+    if (movePixels[0] === 0 && movePixels[1] === -1) return "up";
+    if (movePixels[0] === 0 && movePixels[1] === 1) return "down";
+    if (movePixels[0] === -1 && movePixels[1] === 0) return "left";
+    if (movePixels[0] === 1 && movePixels[1] === 0) return "right";
+};
 const changeDirection = (direction) => {
+    if (direction == getCurrentDirection()) return;
+
+    console.log(getCurrentDirection());
     switch (direction) {
         case "up":
             movePixels = [0, -1];
@@ -100,6 +109,7 @@ const changeDirection = (direction) => {
             movePixels = [1, 0];
             break;
     }
+    createGame();
 };
 
 document.body.addEventListener("keydown", (e) => {
