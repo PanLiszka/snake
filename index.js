@@ -9,7 +9,13 @@ const restartButton = document.querySelector(".container .game-over .restart");
 let isOver = false;
 let interval;
 
-let foodImages = ["apple.png", "carrot.png", "cherry.png", "orange.png"];
+let foodImages = [
+    "apple.png",
+    "carrot.png",
+    "cherry.png",
+    "orange.png",
+    "lemon.png",
+];
 let foodImage = foodImages[Math.floor(Math.random() * foodImages.length)];
 
 //                  x, y
