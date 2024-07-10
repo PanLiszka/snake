@@ -92,9 +92,16 @@ const getCurrentDirection = () => {
     if (movePixels[0] === 1 && movePixels[1] === 0) return "right";
 };
 const changeDirection = (direction) => {
-    if (direction == getCurrentDirection()) return;
+    const currentDirection = getCurrentDirection();
+    if (direction == currentDirection) return;
 
-    console.log(getCurrentDirection());
+    if (snakeBody.length > 0) {
+        if (currentDirection == "up" && direction == "down") return;
+        if (currentDirection == "down" && direction == "up") return;
+        if (currentDirection == "left" && direction == "right") return;
+        if (currentDirection == "right" && direction == "left") return;
+    }
+
     switch (direction) {
         case "up":
             movePixels = [0, -1];
